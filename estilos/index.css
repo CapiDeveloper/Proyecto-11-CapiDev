@@ -1,0 +1,422 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'DynaPuff', cursive;
+}
+ul{
+    padding-left: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    width: 100%;
+    object-fit: cover;
+}
+svg{
+    width: 100%;
+}
+/* Header */
+.header{
+    background-image: radial-gradient(#2a2929 2px, transparent 2px), radial-gradient(#2a2929 2px, transparent 2px);
+    background-size: 32px 32px;
+    background-position: 0 0, 16px 16px;
+    background-color: #302f2f;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.menu{
+    width: 95%;
+    margin-inline: auto;
+    padding-block: 10px;
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width:768px) {
+    .menu{
+        flex-direction: row;
+    }
+}
+.logo{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+.logo a{
+    color: white;
+    font-weight: 900;
+    font-size: 18px;
+    border: 3px solid white;
+    padding: 5px;
+    border-radius: 8px;
+}
+.logo img{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+@media (min-width:768px) {
+    .logo img{
+        display: none;
+    }
+}
+.navegacion{
+    background-color: red;
+    flex: 1;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    transform: translateY(-130%);
+    transition:  transform .5s ease;
+    background-image: radial-gradient(#2a2929 2px, transparent 2px), radial-gradient(#2a2929 2px, transparent 2px);
+    background-size: 32px 32px;
+    background-position: 0 0, 16px 16px;
+    background-color: #302f2f;
+}
+@media (min-width:768px) {
+    .navegacion{
+        position: static;
+        transform: translateY(0%);
+    }
+}
+.navegacion--dinamico{
+    top: 60px;
+    transform: translateY(0%);
+}
+.navegacion--lista{
+    padding-block: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+@media (min-width:768px) {
+    .navegacion--lista{
+        flex-direction: row;
+        padding-block:0 ;
+    }
+}
+.navegacion--lista li{
+    width: 100%;
+    text-align: center;
+}
+.navegacion--lista li a{
+    display: block;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-weight:700;
+}
+.navegacion--lista li a:hover{
+    background-color: rgba(0, 0, 0, 0.33);
+}
+/* Banner */
+.banner{
+    background-image: linear-gradient(45deg, #ff4747 50%, transparent 50%);
+    background-size: 20px 20px;
+    background-color: #E70112;
+    overflow: hidden;
+}
+.banner--contenedor{
+    width: 90%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+@media (min-width:768px) {
+    .banner--contenedor{
+        flex-direction: row;
+    }
+}
+.banner--info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+    padding-block: 20px;
+    color: white;
+}
+@media (min-width:768px) {
+    .banner--info{
+        align-items: start;
+        text-align: start;
+        width: 50%;
+    }
+}
+.banner--info h1{
+    color: white;
+    font-size: 30px;
+    font-weight: 900;
+}
+.banner--info a{
+    border: 5px solid white;
+    background-color: white;
+    font-weight: 900;
+    color: black;
+    border-radius: 10px;
+    padding-block: 5px;
+    padding-inline: 15px;
+    transition: all .5s ease;
+
+}
+.banner--info a:hover{
+    transform: scale(1.2);
+    background-color: #302f2f;
+    color: white;
+    border-color: white;
+}
+.banner--imagen{
+    position: relative;
+}
+.banner--imagen picture:first-child img{
+    animation: imagenUno 5s infinite linear;
+}
+.banner--imagen picture:last-of-type img{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 80%;
+    height: 100%;
+    animation: imagenDos 5s infinite linear;
+}
+@keyframes imagenUno{
+    0%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    50%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    100%{
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+@keyframes imagenDos{
+    0%{
+        transform: scale(1);
+        opacity: 1;
+    }
+    50%{
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Nubes */
+.nubes-svg{
+    background-image: linear-gradient(45deg, #ff4747 50%, transparent 50%);
+    background-size: 20px 20px;
+    background-color: #E70112;
+}
+/* Main */
+.personajes{
+    background-color: red;
+    margin-top: -10px;
+    padding: 50px;
+    overflow: hidden;
+    background-image: radial-gradient(rgba(41, 40, 40, 0.15) 2px, transparent 2px);
+    background-size: 32px 32px;
+    background-color: #ffffff;
+}
+.personajes h2{
+    text-align: center;
+}
+.personajes p{
+    color: #2a2929;
+    text-align: center;
+    padding: 20px;
+}
+.cards{
+    display: grid;
+    width: 60%;
+    margin-inline: auto;
+    gap: 10px;
+}
+@media (min-width:480px) {
+    .cards{
+        grid-template-columns: 1fr 1fr;
+        width: 80%;
+        gap: 50px;
+    }
+}
+@media (min-width:768px) {
+    .cards{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        width: 90%;
+        gap: 80px;
+    }
+}
+.cards li{
+    position: relative;
+}
+.card{
+    transition: all .3s ease;
+}
+.card picture:first-child img{
+    box-shadow:  0 60px 60px -60px rgba(41, 40, 40, 0.15);
+    border-radius: 4px;    
+}
+.card picture:last-child img{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    width: 80%;
+    margin-inline:auto;
+    transition: all .5s ease;
+}
+.card:before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: linear-gradient(to bottom, transparent 10%,rgba(0, 0, 0, 0.626) 50%,black 100%);
+    transition: all .8s ease;
+    opacity: 0;
+}
+.card:hover::before{
+    opacity: 1;
+}
+.card:hover{
+    transform: 
+        perspective(250px)
+        rotateX(30deg)
+        translateY(-5%)
+        translateZ(0)
+    ;
+}
+.card:hover picture:last-child img{
+    transform: 
+        perspective(10px)
+        rotateX(-1deg)
+        translateY(-5%)
+        translateZ(0)
+    ;
+}
+/* Sleccion de images */
+.seleccion{
+    background:
+      	conic-gradient(at 10% 50%,#0000 75%,#302f2f 0),
+      	conic-gradient(at 10% 50%,#0000 75%,#302f2f 0) calc(1*32px) calc(3*32px),
+      	conic-gradient(at 10% 50%,#0000 75%,#302f2f 0) calc(2*32px) calc(1*32px),
+      	conic-gradient(at 10% 50%,#0000 75%,#302f2f 0) calc(3*32px) calc(4*32px),
+      	conic-gradient(at 10% 50%,#0000 75%,#302f2f 0) calc(4*32px) calc(2*32px),
+      	conic-gradient(at 50% 10%,#0000 75%,#302f2f 0) 0 calc(4*32px),
+      	conic-gradient(at 50% 10%,#0000 75%,#302f2f 0) calc(1*32px) calc(2*32px),
+      	conic-gradient(at 50% 10%,#0000 75%,#302f2f 0) calc(2*32px) 0,
+      	conic-gradient(at 50% 10%,#0000 75%,#302f2f 0) calc(3*32px) calc(3*32px),
+      	conic-gradient(at 50% 10%,#0000 75%,#302f2f 0) calc(4*32px) calc(1*32px),
+      	#2a2929;
+    background-size: 160px 160px;
+    padding: 20px;
+    overflow: hidden;
+}
+.seleccion h2{
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+.seleccion--container{
+    width: 90%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+@media (min-width:768px) {
+    .seleccion--container{
+        flex-direction: row;
+    }
+}
+#imagen--actual{
+    min-width: 200px;
+    min-width: 200px;
+    object-fit: contain;
+}
+.imagenes--personajes{
+    display: flex;
+}
+.imagenes--personajes img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    transition: all .5s ease;
+}
+.imagenes--personajes img:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+.potencial{
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    padding: 20px;
+}
+.potencial h3{
+    color: white;
+    padding: 10px;
+}
+.potencial--info{
+    color: #ff4747;
+}
+.porcentaje{
+    color: white;
+    text-align: end;
+    width: 100%;
+    background-color: #E70112;
+    border-radius: 5px;
+    padding: 5px;
+}
+/* Footer */
+.footer{
+    background:
+      	conic-gradient(at 10% 50%,#0000 75%,#302f2f 0),
+      	conic-gradient(at 10% 50%,#0000 75%,#302f2f 0) calc(1*32px) calc(3*32px),
+      	conic-gradient(at 10% 50%,#0000 75%,#302f2f 0) calc(2*32px) calc(1*32px),
+      	conic-gradient(at 10% 50%,#0000 75%,#302f2f 0) calc(3*32px) calc(4*32px),
+      	conic-gradient(at 10% 50%,#0000 75%,#302f2f 0) calc(4*32px) calc(2*32px),
+      	conic-gradient(at 50% 10%,#0000 75%,#302f2f 0) 0 calc(4*32px),
+      	conic-gradient(at 50% 10%,#0000 75%,#302f2f 0) calc(1*32px) calc(2*32px),
+      	conic-gradient(at 50% 10%,#0000 75%,#302f2f 0) calc(2*32px) 0,
+      	conic-gradient(at 50% 10%,#0000 75%,#302f2f 0) calc(3*32px) calc(3*32px),
+      	conic-gradient(at 50% 10%,#0000 75%,#302f2f 0) calc(4*32px) calc(1*32px),
+      	#2a2929;
+    background-size: 160px 160px;
+}
+.footer--contenedor{
+    border-top: 5px solid rgba(246, 241, 241, 0.15);
+    color: white;
+    padding-block: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    width: 90%;
+    margin-inline: auto;
+    justify-content: space-between;
+}
+@media (min-width:768px) {
+    .footer--contenedor{
+        flex-direction: row;
+    }
+}
+.navegacion--footer{
+    gap: 10px;
+}
